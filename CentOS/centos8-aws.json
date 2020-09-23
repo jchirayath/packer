@@ -1,0 +1,35 @@
+{
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "access_key": "{{user `access_key`}}",
+      "secret_key": "{{user `secret_key`}}",
+      "ami_name": "{{user `name`}}",
+      "region": "{{user `region`}}",
+      "source_ami": "{{user `source_ami`}}",
+      "instance_type": "t2.micro",
+      "vpc_id": "vpc-0c6ed9d04c57957d9",
+      "subnet_id": "subnet-00ccc6c6dce332a29",
+      "communicator": "ssh",
+      "ssh_username": "centos",
+      "run_tags":{"Name":"packer-image Jacob Chirayath"}
+    }
+  ],
+  "variables": {
+    "name": "CentOS8",
+    "source_ami": "ami-01ca03df4a6012157",
+    "access_key": "",
+    "secret_key": "",
+    "region": "us-east-1"
+  },
+  "provisioners": [{
+		"type": "shell",
+    "expect_disconnect": true,
+		"scripts": [
+      "scripts/installAWSpkgs8.sh",
+      "scripts/CreateADJoinStartup.sh",
+		],
+		"start_retry_timeout": "15m",
+		"execute_command": "echo 'centos'|sudo -S sh '{{.Path}}'"
+	}]
+}

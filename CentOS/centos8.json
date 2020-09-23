@@ -1,0 +1,71 @@
+{
+  "builders": [
+    {
+      "CPUs": "{{user `vm-cpu-num`}}",
+      "RAM": "{{user `vm-mem-size`}}",
+      "RAM_reserve_all": false,
+      "boot_command": [
+               "<tab><bs><bs><bs><bs><bs>text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
+       ],
+      "boot_order": "disk,cdrom,floppy",
+      "boot_wait": "10s",
+      "cluster": "{{user `vsphere-cluster`}}",
+      "convert_to_template": true,
+      "datacenter": "{{user `vsphere-datacenter`}}",
+      "datastore": "{{user `vsphere-datastore`}}",
+      "disk_controller_type": "pvscsi",
+      "guest_os_type": "centos64Guest",
+      "insecure_connection": "true",
+      "iso_checksum": "86fa48ff1899f4186697bd73067325f813d2327b243d3a6f4f246a3b6ead3b55",
+      "iso_paths": [
+        "{{user `iso_url`}}"
+      ],
+      "network_adapters": [
+        {
+          "network": "{{user `vsphere-network`}}",
+	  "network_card": "vmxnet3"
+        }
+      ],
+      "notes": "Build via Packer",
+      "password": "{{user `vsphere-password`}}",
+      "ssh_password": "server",
+      "ssh_username": "root",
+      "storage": [
+        {
+          "disk_size": "{{user `vm-disk-size`}}",
+          "disk_thin_provisioned": true
+        }
+      ],
+      "type": "vsphere-iso",
+      "username": "{{user `vsphere-user`}}",
+      "vcenter_server": "{{user `vsphere-server`}}",
+      "vm_name": "{{user `vm-name`}}"
+    }
+  ],
+  "variables": {
+    "iso_checksum": "86fa48ff1899f4186697bd73067325f813d2327b243d3a6f4f246a3b6ead3b55",
+    "iso_url": "[SynologySoftware] ISO/CentOS-Stream-8-x86_64-20191219-dvd1.iso",
+    "vm-cpu-num": "1",
+    "vm-disk-size": "10000",
+    "vm-mem-size": "4096",
+    "vm-name": "TEMPLATE-CentOS8",
+    "vsphere-cluster": "IPBR-Cluster",
+    "vsphere-datacenter": "Atlanta",
+    "vsphere-datastore": "NFS_1_141_Vol1",
+    "vsphere-network": "VM Network",
+    "vsphere-user": "{{env `VUSER`}}",
+    "vsphere-password": "{{env `VPASS`}}",
+    "vsphere-server": "{{env `VHOST`}}"
+  },
+  "provisioners": [{
+		"type": "shell",
+		"scripts": [
+		  "scripts/PostInstall.sh",
+  		"scripts/oscap-pci-dss8.sh",
+      "scripts/CreateADJoinStartup.sh",
+			"scripts/cleanup.sh"
+		],
+		"start_retry_timeout": "15m",
+		"execute_command": "echo 'centos'|sudo -S sh '{{.Path}}'"
+	}]
+}
