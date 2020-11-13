@@ -9,7 +9,7 @@
 
   "iso-url": "http://releases.ubuntu.com/18.04/ubuntu-18.04.5-live-server-amd64.iso",
   "iso-checksum": "3756b3201007a88da35ee0957fbe6666c495fb3d8ef2e851ed2bd1115dc36446",
-  "iso-checksum-type": "sha256"
+  "iso-checksum-type": "sha256",
 
   "vcenter-cluster": "IPBR-Cluster",
   "vcenter-host": "172.16.1.20",
