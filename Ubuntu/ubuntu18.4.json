@@ -12,8 +12,8 @@
       "convert_to_template": true,
       "insecure_connection": "true",
 
-      "ssh_password": "{{user `ssh-username`}}",
-      "ssh_username": "{{user `ssh-password`}}",
+      "ssh_password": "{{user `ssh_username`}}",
+      "ssh_username": "{{user `ssh_password`}}",
 
       "boot_order": "disk,cdrom",
       "boot_wait": "10s",
