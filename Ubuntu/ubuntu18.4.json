@@ -70,7 +70,7 @@
     "vm-name": "TEMPLATE-Ubuntu18.04",
     "guest_os_type": "ubuntu64Guest",
     "notes": "Build via Packer - Ubuntu 18.04",
-    "iso_url": "[SynologySoftware] ISO/CentOS-7-x86_64-DVD-1708.iso",
+    "iso_url": "[SynologySoftware] ISO/ubuntu-18.04-live-server-amd64.iso",
     "vm-cpu-num": "1",
     "vm-mem-size": "4096",
     "vm-disk-size": "10000",
@@ -90,8 +90,7 @@
 		"type": "shell",
 		"scripts": [
 		  "scripts/PostInstall.sh",
-  		"scripts/oscap-pci-dss.sh",
-      "scripts/CreateADJoinStartup.sh",
+  		"scripts/SetSyslog.sh",
 			"scripts/cleanup.sh"
 		],
 		"start_retry_timeout": "15m",
