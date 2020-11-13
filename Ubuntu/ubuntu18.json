@@ -22,7 +22,6 @@
 
       "convert_to_template": "true",
 
-      "network": "{{user `vcenter-network`}}",
       "network_adapters": [
         {
           "network": "{{user `vcenter-network`}}",
@@ -32,15 +31,8 @@
       "ssh_username": "{{user `ssh_username`}}",
       "ssh_password": "{{user `ssh_password`}}",
 
-      "storage": [
-        {
-          "disk_size": "{{user `vm-disk-size`}}",
-          "disk_thin_provisioned": true
-        }
-      ],
       "disk_controller_type": "pvscsi",
       "disk_size": "{{user `vm-disk-size`}}",
-      "disk_thin_provisioned": true,
 
       "iso_checksum": "{{user `iso-checksum-type`}}:{{user `iso-checksum`}}",
       "iso_urls": "{{user `iso-url`}}",
