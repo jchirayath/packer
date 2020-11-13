@@ -32,6 +32,12 @@
       "ssh_password": "{{user `ssh_password`}}",
 
       "disk_controller_type": "pvscsi",
+      "storage": [
+        {
+          "disk_size": "{{user `vm-disk-size`}}",
+          "disk_thin_provisioned": true
+        }
+      ],
 
       "iso_checksum": "{{user `iso-checksum-type`}}:{{user `iso-checksum`}}",
       "iso_urls": "{{user `iso-url`}}",
