@@ -44,7 +44,7 @@
 
       "guest_os_type": "ubuntu64Guest",
       "boot_order": "disk,cdrom",
-      "boot_wait": "10s",
+      "boot_wait": "1m",
       "boot_command": [
         "<esc><wait>",
         "<esc><wait>",
