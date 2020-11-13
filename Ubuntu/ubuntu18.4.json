@@ -59,6 +59,7 @@
 
       "vcenter_server": "{{user `vsphere-server`}}",
       "cluster": "{{user `vsphere-cluster`}}",
+      "host": "{{user `vspher-host`}}",
       "datacenter": "{{user `vsphere-datacenter`}}",
       "datastore": "{{user `vpshere-datastore`}}",
 
@@ -76,6 +77,7 @@
     "vm-disk-size": "10000",
 
     "vsphere-cluster": "IPBR-Cluster",
+    "vsphere-host": "172.16.1.20",
     "vsphere-datacenter": "Atlanta",
     "vsphere-datastore": "NFS_1_141_Vol1",
     "vsphere-network": "711-LabShared",
