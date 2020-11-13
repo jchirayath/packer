@@ -46,7 +46,7 @@
       "boot_order": "disk,cdrom",
       "boot_wait": "10s",
       "boot_command": [
-        "<wait30>",
+        "<wait1m",
         "<esc><wait>",
         "<esc><wait>",
         "<enter><wait>",
