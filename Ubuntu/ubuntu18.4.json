@@ -83,8 +83,8 @@
     "vsphere-password": "{{env `VPASS`}}",
     "vsphere-server": "{{env `VHOST`}}",
 
-    "ssh_username": "{{env `ssh-username`}}",
-    "ssh_password": "{{env `ssh-password`}}"
+    "ssh_username": "{{env `ssh_username`}}",
+    "ssh_password": "{{env `ssh_password`}}"
   },
   "provisioners": [{
 		"type": "shell",
