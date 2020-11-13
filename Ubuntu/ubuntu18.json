@@ -7,18 +7,18 @@
       "username": "{{user `vcenter-username`}}",
       "password": "{{user `vcenter-password`}}",
       "insecure_connection": "true",
-      "datacenter": "{{user `datacenter`}}",
+      "datacenter": "{{user `vcenter-datacenter`}}",
 
       "vm_name": "{{user `vm-name`}}",
 
-      "datastore": "{{user `datastore`}}",
-      "folder": "{{user `folder`}}",
-      "host": "{{user `host`}}",
-      "cluster": "{{user `cluster`}}",
+      "datastore": "{{user `vcenter-datastore`}}",
+      "folder": "{{user `vcenter-folder`}}",
+      "host": "{{user `vcenter-host`}}",
+      "cluster": "{{user `vcenter-cluster`}}",
 
       "convert_to_template": "true",
 
-      "network": "{{user `network`}}",
+      "network": "{{user `vcenter-network`}}",
       "network_card": "vmxnet3",
 
       "boot_order": "disk,cdrom",
