@@ -69,9 +69,9 @@
     }
   ],
   "variables": {
-    "vm-name": "TEMPLATE-Ubuntu18.04",
+    "vm-name": "TEMPLATE-Ubuntu1804",
     "guest_os_type": "ubuntu64Guest",
-    "notes": "Build via Packer - Ubuntu 18.04",
+    "notes": "Build via Packer - Ubuntu 1804",
     "iso_url": "[SynologySoftware] ISO/ubuntu-18.04-live-server-amd64.iso",
     "vm-cpu-num": "1",
     "vm-mem-size": "4096",
