@@ -59,7 +59,7 @@
 
       "vcenter_server": "{{user `vsphere-server`}}",
       "cluster": "{{user `vsphere-cluster`}}",
-      "host": "{{user `vspher-host`}}",
+      "host": "{{user `vsphere-host`}}",
       "datacenter": "{{user `vsphere-datacenter`}}",
       "datastore": "{{user `vpshere-datastore`}}",
 
