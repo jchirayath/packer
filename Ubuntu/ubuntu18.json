@@ -25,8 +25,8 @@
 
       "guest_os_type": "ubuntu64Guest",
 
-      "ssh_username": "{{user `ssh-username`}}",
-      "ssh_password": "{{user `ssh-password`}}",
+      "ssh_username": "{{user `ssh_username`}}",
+      "ssh_password": "{{user `ssh_password`}}",
 
       "CPUs": "{{user `vm-cpu-num`}}",
       "RAM": "{{user `vm-mem-size`}}",
