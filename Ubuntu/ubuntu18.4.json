@@ -59,9 +59,9 @@
 
       "vcenter_server": "{{user `vsphere-server`}}",
       "cluster": "{{user `vsphere-cluster`}}",
+      "datastore": "{{user `vpshere-datastore`}}",
       "host": "{{user `vsphere-host`}}",
       "datacenter": "{{user `vsphere-datacenter`}}",
-      "datastore": "{{user `vpshere-datastore`}}",
       "folder": "{{user `vsphere-folder`}}",
 
       "username": "{{user `vsphere-user`}}",
