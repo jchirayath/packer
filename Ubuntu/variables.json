@@ -17,7 +17,7 @@
   "vcenter-datastore": "NFS_1_141_Vol1",
   "vcenter-folder": "Templates",
   "vcenter-network": "711-LabShared",
-  "vcenter-user": "{{env `VUSER`}}",
+  "vcenter-username": "{{env `VUSER`}}",
   "vcenter-password": "{{env `VPASS`}}",
   "vcenter-server": "{{env `VHOST`}}",
 
