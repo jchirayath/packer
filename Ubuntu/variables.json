@@ -8,7 +8,6 @@
   "vm-disk-size": "10240",
 
   "iso-url": "http://releases.ubuntu.com/18.04/ubuntu-18.04.5-live-server-amd64.iso",
-  "iso-checksum-type": "sha256",
 
   "vcenter-cluster": "IPBR-Cluster",
   "vcenter-host": "172.16.1.20",
