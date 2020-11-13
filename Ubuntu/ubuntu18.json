@@ -28,7 +28,7 @@
           "network": "{{user `vcenter-network`}}",
           "network_card": "vmxnet3"
         }
-
+      ],
       "ssh_username": "{{user `ssh_username`}}",
       "ssh_password": "{{user `ssh_password`}}",
 
