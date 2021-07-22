@@ -5,7 +5,7 @@
       "RAM": "{{user `vm-mem-size`}}",
       "RAM_reserve_all": true,
       "boot_command": [
-        "<enter><wait><f6><wait><esc><wait>",
+        "<wait1m><enter><wait><f6><wait><esc><wait>",
         "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
         "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
         "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
