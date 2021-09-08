@@ -13,6 +13,7 @@
     ],
     "builders": [
         {
+        "type": "vmware-iso",
         "boot_command": [
 				"<esc><wait>",
 				"install preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg debian-installer=en_US auto locale=en_US kbd-chooser/method=us <wait>",
