@@ -1,10 +1,7 @@
 # packer-kali-linux
-This contains a packer build config that will set you up with a new 
+This contains a packer build config that will set you up with a new
 Kali Linux image that is configured and ready for use.
 
-## Requirements:
-* VMware (Fusion OR Workstation)
-* [Packer](https://www.packer.io/downloads.html)
 
 ## Use:
 * Clone repository
@@ -18,7 +15,7 @@ Kali Linux image that is configured and ready for use.
 * You can turn off headless build mode so you can see the build happening
  * edit `kali.json` and change `"headless": true` to `"headless": false`
 * You can run packer in debug mode to walk through each step of the build one at a time
- * `packer build --debug kali.json` 
+ * `packer build --debug kali.json`
 
 ## Build Specifics
 * Root user will be set up with custom password / authorized_keys file

@@ -14,6 +14,13 @@
     "builders": [
         {
         "type": "vmware-iso",
+        "vcenter_server": "{{user `vsphere-server`}}",
+        "cluster": "{{user `vsphere-cluster`}}",
+        "datastore": "{{user `vpshere-datastore`}}",
+        "host": "{{user `vsphere-host`}}",
+        "datacenter": "{{user `vsphere-datacenter`}}",
+        "folder": "{{user `vsphere-folder`}}",
+
         "boot_command": [
 				"<esc><wait>",
 				"install preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg debian-installer=en_US auto locale=en_US kbd-chooser/method=us <wait>",
