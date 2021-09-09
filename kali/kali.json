@@ -1,26 +1,4 @@
 {
-  "variables": {
-    "vm-name": "TEMPLATE-Kali",
-    "guest_os_type": "ubuntu64Guest",
-    "notes": "Build via Packer - Kali 2021.2",
-    "iso_url": "[SynologySoftware] ISO/ubuntu-18.04-live-server-amd64.iso",
-    "vm-cpu-num": "1",
-    "vm-mem-size": "4096",
-    "vm-disk-size": "10000",
-
-    "vsphere-cluster": "IPBR-Cluster",
-    "vsphere-host": "172.16.1.20",
-    "vsphere-datacenter": "Atlanta",
-    "vsphere-datastore": "NFS_1_141_Vol1",
-    "vsphere-folder": "Templates",
-    "vsphere-network": "711-LabShared",
-    "vsphere-user": "{{env `VUSER`}}",
-    "vsphere-password": "{{env `VPASS`}}",
-    "vsphere-server": "{{env `VHOST`}}",
-
-    "ssh_username": "{{env `ssh_username`}}",
-    "ssh_password": "{{env `ssh_password`}}"
-   },
   "provisioners": [
         {
             "type": "shell",
@@ -69,5 +47,24 @@
 			"ssh_port": 22,
 			"ssh_wait_timeout": "10000s"
     }
-  ]
+  ],
+    "variables": {
+      "vm-name": "TEMPLATE-Kali",
+      "guest_os_type": "ubuntu64Guest",
+      "notes": "Build via Packer - Kali 2021.2",
+      "iso_url": "[SynologySoftware] ISO/ubuntu-18.04-live-server-amd64.iso",
+      "vm-cpu-num": "1",
+      "vm-mem-size": "4096",
+      "vm-disk-size": "10000",
+
+      "vsphere-cluster": "IPBR-Cluster",
+      "vsphere-host": "172.16.1.20",
+      "vsphere-datacenter": "Atlanta",
+      "vsphere-datastore": "NFS_1_141_Vol1",
+      "vsphere-folder": "Templates",
+      "vsphere-network": "711-LabShared",
+      "vsphere-user": "{{env `VUSER`}}",
+      "vsphere-password": "{{env `VPASS`}}",
+      "vsphere-server": "{{env `VHOST`}}"
+     }
 }
