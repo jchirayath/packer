@@ -31,7 +31,8 @@
       "RAM_reserve_all": false,
       "storage": [
         {
-          "disk_size": "{{user `vm-disk-size`}}"
+          "disk_size": "{{user `vm-disk-size`}}".
+          "disk_thin_provisioned": true
         }
       ],
       "boot_command": [
