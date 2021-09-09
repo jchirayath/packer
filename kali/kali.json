@@ -45,7 +45,7 @@
 			"boot_wait": "10s",
 			"http_directory": "http",
 			"iso_urls": [
-				"https://cdimage.kali.org/kali-2021.2/kali-linux-2021.2-installer-amd64.iso"
+				"[SynologySoftware] ISO/kali-linux-2021.2-amd64.iso"
 			],
 			"iso_checksum": "ef83bafe1f19088666a8080d7ea07bd4f8da2fda0fcb3ef5f2ce2658f349c119",
 			"shutdown_command": "sudo shutdown -P now",
