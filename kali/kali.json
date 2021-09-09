@@ -66,7 +66,7 @@
       "vsphere-cluster": "IPBR-Cluster",
       "vsphere-host": "172.16.1.20",
       "vsphere-datacenter": "Atlanta",
-      "vsphere-datastore": "NFS_1_141_Vol1",
+      "vsphere-datastore": "SynologySoftware",
       "vsphere-folder": "Templates",
       "vsphere-network": "711-LabShared",
       "vsphere-user": "{{env `VUSER`}}",
