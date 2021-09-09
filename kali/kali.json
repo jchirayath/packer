@@ -20,6 +20,8 @@
       "host": "{{user `vsphere-host`}}",
       "datacenter": "{{user `vsphere-datacenter`}}",
       "folder": "{{user `vsphere-folder`}}",
+      "username": "{{user `vsphere-user`}}",
+      "password": "{{user `vsphere-password`}}",
 
       "vm_name": "{{user `vm-name`}}",
       "guest_os_type": "{{user `guest_os_type`}}",
@@ -52,9 +54,6 @@
       "vm-name": "TEMPLATE-Kali",
       "guest_os_type": "ubuntu64Guest",
       "notes": "Build via Packer - Kali 2021.2",
-      "CPUs": "{{user `vm-cpu-num`}}",
-      "RAM": "{{user `vm-mem-size`}}",
-      "RAM_reserve_all": false,
       "iso_url": "[SynologySoftware] ISO/ubuntu-18.04-live-server-amd64.iso",
 
       "vsphere-cluster": "IPBR-Cluster",
