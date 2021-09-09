@@ -44,10 +44,9 @@
       ],
 			"boot_wait": "10s",
 			"http_directory": "http",
-			"iso_urls": [
-				"[SynologySoftware] ISO/kali-linux-2021.2-amd64.iso"
-			],
-			"iso_checksum": "ef83bafe1f19088666a8080d7ea07bd4f8da2fda0fcb3ef5f2ce2658f349c119",
+      "iso_paths": [
+        "{{user `os_iso_path`}}",
+      ],
 			"shutdown_command": "sudo shutdown -P now",
 			"ssh_username": "labadmin",
 			"ssh_password": "Password123!",
@@ -71,6 +70,7 @@
       "vsphere-network": "711-LabShared",
       "vsphere-user": "{{env `VUSER`}}",
       "vsphere-password": "{{env `VPASS`}}",
-      "vsphere-server": "{{env `VHOST`}}"
+      "vsphere-server": "{{env `VHOST`}}",
+      "os_iso_path": "[SynologySoftware] ISO/kali-linux-2021.2-amd64.iso"
      }
 }
