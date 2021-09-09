@@ -14,6 +14,7 @@
   "builders": [
   {
       "type": "vsphere-iso",
+      "insecure_connection": true,
       "vcenter_server": "{{user `vsphere-server`}}",
       "cluster": "{{user `vsphere-cluster`}}",
       "datastore": "{{user `vpshere-datastore`}}",
