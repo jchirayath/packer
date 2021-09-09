@@ -64,6 +64,7 @@
       "notes": "Build via Packer - Kali 2021.2",
 
       "vsphere-cluster": "IPBR-Cluster",
+      "vsphere-host": "172.16.1.20",
       "vsphere-datacenter": "Atlanta",
       "vsphere-datastore": "SynologySoftware",
       "vsphere-folder": "Templates",
