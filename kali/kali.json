@@ -29,8 +29,11 @@
       "CPUs": "{{user `vm-cpu-num`}}",
       "RAM": "{{user `vm-mem-size`}}",
       "RAM_reserve_all": false,
-      "disk_size": "{{user `vm-disk-size`}}",
-
+      "storage": [
+        {
+          "disk_size": "{{user `vm-disk-size`}}"
+        }
+      ],
       "boot_command": [
 			  "<esc><wait>",
 				"install preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg debian-installer=en_US auto locale=en_US kbd-chooser/method=us <wait>",
